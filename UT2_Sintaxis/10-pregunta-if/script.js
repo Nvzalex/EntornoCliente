@@ -11,6 +11,6 @@
  * (https://es.javascript.info/logical-operators#un-pregunta-acerca-de-if).
  */
 
-if (-1 || 0) alert("primero");
-if (-1 && 0) alert("segundo");
-if (null || -1 && 1) alert("tercero");
+if (-1 || 0) alert("primero"); // Se ejecuta
+if (-1 && 0) alert("segundo"); // No se ejecuta
+if (null || (-1 && 1)) alert("tercero"); // Se ejecuta
