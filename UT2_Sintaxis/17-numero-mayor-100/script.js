@@ -1,5 +1,5 @@
 /**
- * Ejercicio 18 — Pedir número mayor que 100
+ * Ejercicio 17 — Pedir número mayor que 100
  * (Sentencias: bucles)
  * --------------------------------------------------------------------
  *

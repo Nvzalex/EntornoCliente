@@ -1,5 +1,5 @@
 /**
- * Ejercicio 14 — Tabla de multiplicar
+ * Ejercicio 13 — Tabla de multiplicar
  * (Sentencias: bucles)
  * --------------------------------------------------------------------
  *

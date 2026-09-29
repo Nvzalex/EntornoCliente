@@ -1,5 +1,5 @@
 /**
- * Ejercicio 13 — EDAD2
+ * Ejercicio 12 — EDAD2
  * (Sentencias: decisiones)
  * --------------------------------------------------------------------
  *

@@ -1,5 +1,5 @@
 /**
- * Ejercicio 12 — INICIOSESION
+ * Ejercicio 11 — INICIOSESION
  * (Sentencias: decisiones)
  * --------------------------------------------------------------------
  *

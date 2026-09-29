@@ -1,5 +1,5 @@
 /**
- * Ejercicio 17 — Horas cada 5 minutos
+ * Ejercicio 16 — Horas cada 5 minutos
  * (Sentencias: bucles)
  * --------------------------------------------------------------------
  *

@@ -1,5 +1,5 @@
 /**
- * Ejercicio 10 — EDAD1
+ * Ejercicio 09 — EDAD1
  * (Sentencias: decisiones)
  * --------------------------------------------------------------------
  *

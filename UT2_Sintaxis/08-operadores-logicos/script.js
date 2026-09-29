@@ -1,5 +1,5 @@
 /**
- * Ejercicio 09 — Resultados con operadores lógicos
+ * Ejercicio 08 — Resultados con operadores lógicos
  * (Operadores lógicos)
  * --------------------------------------------------------------------
  *

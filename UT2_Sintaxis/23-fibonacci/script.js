@@ -1,16 +1,41 @@
 /**
- * Ejercicio 24 — Fibonacci
+ * Ejercicio 23 — Fibonacci
  * (Sentencias: bucles)
  * --------------------------------------------------------------------
  *
- * La serie de Fibonacci es una secuencia que comienza con 0 y 1, donde cada
- * número siguiente es la suma de los dos anteriores (0, 1, 1, 2, 3, 5, 8,
- * 13, 21, 34...).
+ * Haz una función fibonacci(n) que devuelva una cadena con los n
+ *  primeros números de la serie de Fibonacci separados por espacios
+ * en blanco. Si n es un valor incorrecto (sólo se admiten valores
+ * enteros no negativos), la función devolverá la cadena vacía.
  *
- * Haz un script que pida un número n y calcule los n primeros números de la
- * serie. Si el valor introducido es incorrecto (solo se admiten enteros
- * positivos mayores que 0), no debe mostrar nada por consola.
+ * La serie Fibonacci es una secuencia de números naturales que
+ * comienza con 0 y 1, donde cada número subsiguiente es la
+ * suma de los dos anteriores (0, 1, 1, 2, 3, 5, 8, 13, 21, 34, etc.).
  */
 
-let n = prompt("¿Cuántos términos quieres?:");
+function fibonacci(n) {
+  if (typeof n !== "number" || !Number.isInteger(n) || n < 0) {
+    return "";
+  }
 
+  if (n === 0) {
+    return "";
+  }
+
+  if (n === 1) {
+    return "0";
+  }
+
+  let serie = [0, 1];
+
+  for (let i = 2; i < n; i++) {
+    serie.push(serie[i - 1] + serie[i - 2]);
+  }
+
+  return serie.slice(0, n).join(" ");
+}
+
+// Pruebas
+console.log(fibonacci(1)); // ""
+console.log(fibonacci(3)); // "0 1 1"
+console.log(fibonacci(7)); // "0 1 1 2 3 5 8"

@@ -1,5 +1,5 @@
 /**
- * Ejercicio 20 — Tablero
+ * Ejercicio 19 — Tablero
  * (Sentencias: bucles)
  * --------------------------------------------------------------------
  *
@@ -11,5 +11,19 @@
  *
  */
 
-let columnas = prompt("Número de columnas:");
-let filas = prompt("Número de filas:");
+function tablero(numColumnas, numFilas) {
+  for (let fila = 0; fila < numFilas; fila++) {
+    let linea = "";
+    for (let col = 0; col < numColumnas; col++) {
+      // Alterna "#" y " " según la posición (fila + columna)
+      if ((fila + col) % 2 === 0) {
+        linea += "#";
+      } else {
+        linea += " ";
+      }
+    }
+    console.log(linea);
+  }
+}
+
+tablero(2, 7);

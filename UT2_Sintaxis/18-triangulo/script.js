@@ -1,5 +1,5 @@
 /**
- * Ejercicio 19 — Triángulo
+ * Ejercicio 18 — Triángulo
  * (Sentencias: bucles)
  * --------------------------------------------------------------------
  *

@@ -1,5 +1,5 @@
 /**
- * Ejercicio 15 — Múltiplos
+ * Ejercicio 14 — Múltiplos
  * (Sentencias: bucles)
  * --------------------------------------------------------------------
  *

@@ -1,5 +1,5 @@
 /**
- * Ejercicio 11 — Una pregunta acerca de if
+ * Ejercicio 10 — Una pregunta acerca de if
  * (Sentencias: decisiones)
  * --------------------------------------------------------------------
  *

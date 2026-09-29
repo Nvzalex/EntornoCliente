@@ -1,5 +1,5 @@
 /**
- * Ejercicio 08 — Corregir la adición
+ * Ejercicio 07 — Corregir la adición
  * (Operadores básicos, aritméticos)
  * --------------------------------------------------------------------
  *

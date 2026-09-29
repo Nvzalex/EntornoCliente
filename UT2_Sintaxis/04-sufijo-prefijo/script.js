@@ -1,5 +1,5 @@
 /**
- * Ejercicio 05 — Formas sufijo y prefijo
+ * Ejercicio 04 — Formas sufijo y prefijo
  * (Operadores básicos, aritméticos)
  * --------------------------------------------------------------------
  *

@@ -1,5 +1,5 @@
 /**
- * Ejercicio 07 — Conversión de tipos
+ * Ejercicio 06 — Conversión de tipos
  * (Operadores básicos, aritméticos)
  * --------------------------------------------------------------------
  *

@@ -1,5 +1,5 @@
 /**
- * Ejercicio 06 — Resultado de una asignación
+ * Ejercicio 05 — Resultado de una asignación
  * (Operadores básicos, aritméticos)
  * --------------------------------------------------------------------
  *

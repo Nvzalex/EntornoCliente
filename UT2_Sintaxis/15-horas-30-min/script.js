@@ -1,5 +1,5 @@
 /**
- * Ejercicio 16 — Horas cada 30 minutos
+ * Ejercicio 15 — Horas cada 30 minutos
  * (Sentencias: bucles)
  * --------------------------------------------------------------------
  *

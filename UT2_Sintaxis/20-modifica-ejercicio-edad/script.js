@@ -1,5 +1,5 @@
 /**
- * Ejercicio 21 — Modifica el ejercicio 1
+ * Ejercicio 20 — Modifica el ejercicio 1
  * (Sentencias: bucles)
  * --------------------------------------------------------------------
  *
@@ -18,6 +18,4 @@
 
 let edad;
 
-while (true) {
-
-}
+while (true) {}
