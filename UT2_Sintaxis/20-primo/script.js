@@ -1,5 +1,5 @@
 /**
- * Ejercicio 21 — Primo
+ * Ejercicio 20 — Primo
  * (Sentencias: bucles)
  * --------------------------------------------------------------------
  *

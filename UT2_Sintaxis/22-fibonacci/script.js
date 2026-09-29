@@ -1,5 +1,5 @@
 /**
- * Ejercicio 23 — Fibonacci
+ * Ejercicio 22 — Fibonacci
  * (Sentencias: bucles)
  * --------------------------------------------------------------------
  *

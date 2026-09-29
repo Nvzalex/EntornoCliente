@@ -1,5 +1,5 @@
 /**
- * Ejercicio 24 — Binario
+ * Ejercicio 23 — Binario
  * (Sentencias: bucles)
  * --------------------------------------------------------------------
  * Haz una función binario(n) que devuelve una cadena con el número en

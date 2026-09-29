@@ -1,5 +1,5 @@
 /**
- * Ejercicio 22 — Factorial
+ * Ejercicio 21 — Factorial
  * (Sentencias: bucles)
  * --------------------------------------------------------------------
  *
