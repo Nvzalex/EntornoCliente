@@ -5,3 +5,7 @@
  * formato: “120€”, es decir: el número va primero y el
  * signo de euro va al final.
  */
+function extraerValorEuros(str) {
+  return str.slice(0, -1);
+}
+console.log(extraerValorEuros("3289€"));

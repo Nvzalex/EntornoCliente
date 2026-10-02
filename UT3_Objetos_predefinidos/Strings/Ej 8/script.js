@@ -12,3 +12,6 @@
  * Importante: debes utilizar métodos de tipo String. No hay
  * que comprobar el formato de dir, suponemos que es correcto.
  */
+function extraeDatos(dir) {}
+
+console.log(extraeDatos());
