@@ -7,3 +7,14 @@
  * Tener en cuenta: varios espacios en blanco se consideran
  * como uno sólo; las mayúsculas y minúsculas se consideran iguales.
  */
+
+function palindromo(cadena) {
+  let limpia = cadena.toLowerCase().replace(/ /g, "");
+  
+  let invertida = limpia.split("").reverse().join("");
+
+  return limpia === invertida;
+}
+
+console.log(palindromo("Yo hago yoga hoy"));
+console.log(palindromo("esternocleidomastoideo"));

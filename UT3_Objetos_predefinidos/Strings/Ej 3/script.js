@@ -18,4 +18,4 @@ function truncar(str, maxLong) {
 }
 
 console.log(truncar("Lo que me gustaría contar sobre este tema es:", 20));
-// "Lo que me gustaría c…"
+// "Lo que me gustaría c"
