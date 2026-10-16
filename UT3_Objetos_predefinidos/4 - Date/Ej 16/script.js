@@ -6,7 +6,8 @@
  * fecha teniendo en cuenta el párrafo anterior.
  */
 function diaSemanaLocal(fecha)  {
-  
+  const dia = fecha.getDay();
+  return dia === 0 ? 7 : dia;
 }
 
-console.log(diaSemanaLocal());
+console.log(diaSemanaLocal(new Date("2026-10-13")));
