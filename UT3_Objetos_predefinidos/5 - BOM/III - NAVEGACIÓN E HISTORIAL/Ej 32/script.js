@@ -23,7 +23,6 @@ function descomponerURL(url) {
 
   const autoridad = resto.slice(0, iPath);
   const partes = autoridad.split(":");
-
   const dominio = partes[0];
   let puerto;
   if (partes[1] !== undefined) {
