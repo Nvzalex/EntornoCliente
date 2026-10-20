@@ -36,6 +36,6 @@ function descomponerURL(url) {
   return [protocolo, dominio, puerto, path];
 }
 
-console.log(descomponerURL("https://ejemplo.com:8080/curso/tema.html")); // ["https", "ejemplo.com", "8080", "/curso/tema.html"]
+//console.log(descomponerURL("https://ejemplo.com:8080/curso/tema.html")); // ["https", "ejemplo.com", "8080", "/curso/tema.html"]
 
-console.log(descomponerURL("https://ejemplo.com/index.html")); // ["https", "ejemplo.com", "443", "/index.html"]
+//console.log(descomponerURL("https://ejemplo.com/index.html")); // ["https", "ejemplo.com", "443", "/index.html"]

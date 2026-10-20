@@ -1,27 +1,12 @@
 /**
- * 22. Crea una función faltaCumple(dia,mes) que recibe
- * el día y mes de tu cumpleaños y muestra por pantalla
- * el tiempo que falta para tu cumpleaños, expresado
- * con días y horas.Además, que muestre todos los años en
- * que tu cumpleaños va a caer en domingo, desde el próximo
- * cumpleaños hasta el 2100.
+ * 36. Crea una función saludo(idioma) que devuelva «¡Hola!» si el idioma
+ * empieza por es, «Bonjour !» si empieza por fr y «Hello!» en cualquier
+ * otro caso. El parámetro es opcional: si no se indica, se utiliza el idioma del navegador.
+ * saludo("es-ES")   // "¡Hola!"
+ * saludo("fr-FR")   // "Bonjour !"
+ * saludo("de-DE")   // "Hello!"
+ * saludo()          // el saludo correspondiente al idioma de tu navegador
  */
-function faltaCumple(dia, mes) {
-  let hoy = new Date();
-  let anio = hoy.getFullYear();
-  let cumple = new Date(anio, mes - 1, dia);
+function saludo(idioma) {}
 
-  if (cumple < hoy) cumple.setFullYear(anio + 1);
-
-  let horas = (cumple - hoy) / 3600000;
-  let resultado = `Faltan ${Math.floor(horas / 24)} días y ${Math.floor(horas % 24)} horas.\n`;
-
-  for (let a = cumple.getFullYear(); a <= 2100; a++) {
-    if (new Date(a, mes - 1, dia).getDay() === 0)
-      resultado += `${a} cae en domingo\n`;
-  }
-
-  return resultado;
-}
-
-console.log(faltaCumple(23, 5));
+console.log(saludo());
