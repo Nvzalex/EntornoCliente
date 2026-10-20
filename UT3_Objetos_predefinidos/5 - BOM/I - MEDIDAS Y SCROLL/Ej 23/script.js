@@ -22,4 +22,4 @@ function infoVentana() {
   console.log(`Scroll: ${window.scrollX}, ${window.scrollY}`);
 }
 
-infoVentana();
+console.log(infoVentana());

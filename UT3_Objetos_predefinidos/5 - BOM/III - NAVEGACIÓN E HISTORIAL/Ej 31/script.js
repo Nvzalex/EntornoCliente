@@ -1,13 +1,37 @@
 /**
- * 21. Crea una función cuantoFalta(fecha) que devuelva
- * el número de días (número entero) que faltan desde hoy
- * hasta la fecha que se pasa como parámetro.
+ * 31. Crea una función obtenerParametro(nombre) que devuelva
+ * el valor del parámetro nombre de la dirección de la página
+ * actual (utiliza location.search), o null si no existe.
+ *
+ * Ejemplo: si la página se abre como pagina.html?id=5&nombre=Ana:
+ * obtenerParametro("nombre")   // "Ana"
+ * obtenerParametro("id")       // "5"
+ * obtenerParametro("edad")     // null
+ *
+ * Importante: debes utilizar métodos de tipo String (no URLSearchParams).
+ * Si la página no tiene parámetros, devolverá null. Suponemos que
+ * no hay caracteres especiales.
  */
-function cuantoFalta(fecha) {
-  const hoy = new Date();
-  const fechafin = new Date(fecha);
+function obtenerParametro(nombre) {
+  if (location.search === "") {
+    return null;
+  }
 
-  return Math.ceil((fechafin - hoy) / (1000 * 3600 * 24));
+  const pares = location.search.slice(1).split("&");
+
+  for (let par of pares) {
+    const igual = par.indexOf("=");
+    if (igual === -1) continue;
+    const clave = par.slice(0, igual);
+    const valor = par.slice(igual + 1);
+
+    if (clave === nombre) {
+      return valor;
+    }
+  }
+
+  return null;
 }
-
-console.log(cuantoFalta("2028-03-12"));
+console.log(obtenerParametro("nombre")); // "Ana"
+console.log(obtenerParametro("id")); // "5"
+console.log(obtenerParametro("edad")); // nul

@@ -1,17 +1,26 @@
 /**
- * 20. Crea una función getSecondsToTomorrow() que
- * devuelva la cantidad de segundos que faltan para el día de mañana.
+ * 30. Crea una función cambioPagina(url, reemplazar) que recibe una url
+ * y cambia la página web del navegador. Si url es una cadena vacía, null
+ * o undefined, no habrá cambio de página.
  *
- * Por ejemplo, si ahora son las 23:00, entonces:
- * getSecondsToTomorrow() == 3600
+ * El parámetro reemplazar es opcional (por defecto, false). Si vale true,
+ * la página actual no debe quedar en el historial (el botón Atrás no
+ * volverá a ella); en caso contrario, sí.
+ *
+ * Pruébala desde botones con dos páginas tuyas y comprueba con el
+ * botón Atrás la diferencia entre los dos modos.
  */
-function getSecondsToTomorrow() {
-  const ahora = new Date();
-  const segundosHoy =
-    ahora.getHours() * 3600 + ahora.getMinutes() * 60 + ahora.getSeconds();
+function cambioPagina(url, reemplazar = true) {
+  // Validación: cadena vacía, null o undefined → no cambiar
+  if (url === null || url === undefined || url === "") {
+    return;
+  }
 
-  // Un día tiene 86400 segundos
-  return 86400 - segundosHoy;
+  if (reemplazar) {
+    window.location.replace(url); // sin historial
+  } else {
+    window.location.href = url; // con historial
+  }
 }
 
-console.log(getSecondsToTomorrow());
+console.log(cambioPagina("https://www.reddit.com/")); //location.assing para true y location.replace para false

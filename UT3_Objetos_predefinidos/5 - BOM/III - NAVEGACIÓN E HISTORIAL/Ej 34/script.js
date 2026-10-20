@@ -1,27 +1,11 @@
 /**
- * 22. Crea una función faltaCumple(dia,mes) que recibe
- * el día y mes de tu cumpleaños y muestra por pantalla
- * el tiempo que falta para tu cumpleaños, expresado
- * con días y horas.Además, que muestre todos los años en
- * que tu cumpleaños va a caer en domingo, desde el próximo
- * cumpleaños hasta el 2100.
+ * 34. Crea tres páginas, pag1.html, pag2.html y pag3.html,
+ * enlazadas entre sí con enlaces <a href>. En cada una añade tres botones:
+ * «Atrás» (history.back()), «Adelante» (history.forward()) y «Atrás 2» (history.go(-2)).
+ * Al cargar la página, debe mostrar por consola history.length.
+ *
+ * Navega de pag1 a pag2 y a pag3 y prueba los botones. Observa qué ocurre
+ * cuando pulsas «Adelante» en la última página del historial.
+ * Después, sustituye en pag2 el enlace a pag3 por un botón que use
+ * location.replace("pag3.html"). ¿Qué cambia en el comportamiento del botón Atrás y en history.length?
  */
-function faltaCumple(dia, mes) {
-  let hoy = new Date();
-  let anio = hoy.getFullYear();
-  let cumple = new Date(anio, mes - 1, dia);
-
-  if (cumple < hoy) cumple.setFullYear(anio + 1);
-
-  let horas = (cumple - hoy) / 3600000;
-  let resultado = `Faltan ${Math.floor(horas / 24)} días y ${Math.floor(horas % 24)} horas.\n`;
-
-  for (let a = cumple.getFullYear(); a <= 2100; a++) {
-    if (new Date(a, mes - 1, dia).getDay() === 0)
-      resultado += `${a} cae en domingo\n`;
-  }
-
-  return resultado;
-}
-
-console.log(faltaCumple(23, 5));

@@ -1,27 +1,18 @@
 /**
- * 22. Crea una función faltaCumple(dia,mes) que recibe
- * el día y mes de tu cumpleaños y muestra por pantalla
- * el tiempo que falta para tu cumpleaños, expresado
- * con días y horas.Además, que muestre todos los años en
- * que tu cumpleaños va a caer en domingo, desde el próximo
- * cumpleaños hasta el 2100.
+ * 33. Crea una función mismoOrigen(url1, url2) que devuelva true
+ * si las dos url tienen el mismo origen (mismo protocolo, dominio y puerto)
+ * y false si no. Es el criterio que usa el navegador para decidir
+ * qué ventanas pueden comunicarse y qué páginas comparten localStorage.
+ * Puedes reutilizar descomponerURL.
+ *
+ * mismoOrigen("https://ejemplo.com:8080/a.html", "https://ejemplo.com:8080/b/c.html")   // true
+ * mismoOrigen("http://ejemplo.com:8080/a.html", "https://ejemplo.com:8080/a.html")      // false (protocolo)
+ * mismoOrigen("https://ejemplo.com:8080/a", "https://tienda.ejemplo.com:8080/a")        // false (dominio)
+ * mismoOrigen("https://ejemplo.com:8080/a", "https://ejemplo.com:9090/a")               // false (puerto)
+ *
+ * Si has hecho la ampliación del ejercicio anterior, también
+ * debe devolver true para "https://ejemplo.com/a" y "https://ejemplo.com:443/b".
  */
-function faltaCumple(dia, mes) {
-  let hoy = new Date();
-  let anio = hoy.getFullYear();
-  let cumple = new Date(anio, mes - 1, dia);
+function mismoOrigen(url1, url2) {}
 
-  if (cumple < hoy) cumple.setFullYear(anio + 1);
-
-  let horas = (cumple - hoy) / 3600000;
-  let resultado = `Faltan ${Math.floor(horas / 24)} días y ${Math.floor(horas % 24)} horas.\n`;
-
-  for (let a = cumple.getFullYear(); a <= 2100; a++) {
-    if (new Date(a, mes - 1, dia).getDay() === 0)
-      resultado += `${a} cae en domingo\n`;
-  }
-
-  return resultado;
-}
-
-console.log(faltaCumple(23, 5));
+console.log(mismoOrigen(url1, url2));

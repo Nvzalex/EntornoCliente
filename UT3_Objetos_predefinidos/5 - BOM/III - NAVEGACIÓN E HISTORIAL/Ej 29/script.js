@@ -1,17 +1,29 @@
 /**
- * 20. Crea una función getSecondsToTomorrow() que
- * devuelva la cantidad de segundos que faltan para el día de mañana.
+ * 29. Crea una función mostrarUbicacion() que muestre por consola
+ * las partes de la dirección de la página actual: href, origin,
+ * protocol, hostname, port, pathname, search y hash.
  *
- * Por ejemplo, si ahora son las 23:00, entonces:
- * getSecondsToTomorrow() == 3600
+ * Pruébala con una dirección como http://127.0.0.1:5500/ejercicios/pagina.html?id=5&nombre=Ana#final
+ * (escribe a mano los parámetros y el fragmento en la barra de direcciones).
+ * Después, prueba con una dirección que no incluya el puerto. ¿Qué valor tiene port en ese caso?
  */
-function getSecondsToTomorrow() {
-  const ahora = new Date();
-  const segundosHoy =
-    ahora.getHours() * 3600 + ahora.getMinutes() * 60 + ahora.getSeconds();
+function mostrarUbicacion(url) {
+  const u = new URL(url);
 
-  // Un día tiene 86400 segundos
-  return 86400 - segundosHoy;
+  return {
+    href: u.href,
+    origin: u.origin,
+    protocol: u.protocol,
+    hostname: u.hostname,
+    port: u.port,
+    pathname: u.pathname,
+    search: u.search,
+    hash: u.hash,
+  };
 }
 
-console.log(getSecondsToTomorrow());
+console.log(
+  mostrarUbicacion(
+    "http://127.0.0.1:5500/ejercicios/pagina.html?id=5&nombre=Ana#final",
+  ),
+);

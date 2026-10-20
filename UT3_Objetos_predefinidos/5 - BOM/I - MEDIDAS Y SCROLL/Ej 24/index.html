@@ -1,10 +1,182 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Scroll Buttons</title>
+    <style>
+      #controls {
+        position: sticky;
+        top: 0;
+
+        display: flex;
+      }
+      button {
+        cursor: pointer;
+      }
+    </style>
     <script src="script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div id="controls">
+      <button id="btn-subir">Subir</button>
+      <button id="btn-bajar">Bajar 300 px</button>
+      <button id="btn-posicion">Posición</button>
+    </div>
+
+    <h1>Página con mucho contenido</h1>
+
+    <p>
+      1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris.
+    </p>
+    <p>
+      2. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit.
+    </p>
+    <p>
+      3. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam
+      varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus
+      magna felis sollicitudin mauris.
+    </p>
+    <p>
+      4. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus
+      vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut
+      ullamcorper, ligula eu tempor congue, eros est euismod turpis.
+    </p>
+    <p>
+      5. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Sed
+      a libero. Quisque volutpat. Sed at nisl eu lectus tincidunt auctor. Cras
+      pharetra, magna vitae facilisis fringilla.
+    </p>
+    <p>
+      6. Vivamus ac leo pretium faucibus. Nunc egestas, augue at pellentesque
+      auctor, metus ipsum porta magna, in aliquet mauris orci at metus. Nulla
+      facilisi. Aenean nec eros.
+    </p>
+    <p>
+      7. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+      posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra
+      augue nec augue. Nam elit magna, hendrerit sit amet.
+    </p>
+    <p>
+      8. Proin fermentum magna nec lacus. Nunc nonummy metus. Vestibulum ante
+      ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In
+      ac dui quis mi consectetuer lacinia.
+    </p>
+    <p>
+      9. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet
+      nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante
+      arcu, accumsan a, consectetuer eget, posuere ut.
+    </p>
+    <p>
+      10. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti
+      sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+      Curabitur sodales ligula in libero.
+    </p>
+    <p>
+      11. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.
+      Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis
+      tristique sem. Proin ut ligula vel nunc egestas porttitor.
+    </p>
+    <p>
+      12. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.
+      Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus
+      metus, ullamcorper vel, tincidunt sed, euismod in.
+    </p>
+    <p>
+      13. Vivamus luctus egestas rhoncus. Proin vitae justo. Aliquam erat
+      volutpat. Nulla facilisi. Sed quis risus. Nulla facilisi. Integer lacinia
+      sollicitudin massa. Cras metus. Sed aliquet risus a tortor.
+    </p>
+    <p>
+      14. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique,
+      dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante.
+      Nulla quam. Aenean laoreet.
+    </p>
+    <p>
+      15. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede.
+      Ut orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Sed
+      pretium blandit orci. Ut eu diam at pede suscipit sodales.
+    </p>
+    <p>
+      16. Aenean lectus elit, fermentum non, convallis id, sagittis at, neque.
+      Nullam mauris orci, aliquam et, fringilla sit amet, interdum id, nisi.
+      Aliquam ac magna. Donec eleifend, libero at sagittis mollis.
+    </p>
+    <p>
+      17. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit
+      quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere
+      imperdiet, leo. Maecenas malesuada.
+    </p>
+    <p>
+      18. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc
+      nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut
+      eros et nisl sagittis vestibulum.
+    </p>
+    <p>
+      19. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat,
+      pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo
+      pellentesque facilisis. Etiam imperdiet imperdiet orci.
+    </p>
+    <p>
+      20. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit
+      quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere
+      imperdiet, leo. Maecenas malesuada.
+    </p>
+    <p>
+      21. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
+      Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit
+      fringilla. Vestibulum ante ipsum primis in faucibus.
+    </p>
+    <p>
+      22. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi.
+      Suspendisse non nisl sit amet velit hendrerit rutrum. Ut leo. Ut a nisl id
+      ante tempus hendrerit. Proin pretium, leo ac pellentesque.
+    </p>
+    <p>
+      23. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed,
+      euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti
+      sociosqu ad litora torquent per conubia nostra.
+    </p>
+    <p>
+      24. Nam at tortor in tellus interdum luctus. Mauris blandit aliquet elit,
+      eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis
+      porttitor volutpat. Curabitur aliquet quam id dui posuere.
+    </p>
+    <p>
+      25. Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl
+      tempus convallis quis ac lectus. Proin eget tortor risus. Vivamus magna
+      justo, lacinia eget consectetur sed, convallis at tellus.
+    </p>
+    <p>
+      26. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+      Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec
+      sollicitudin molestie malesuada. Nulla quis lorem ut libero.
+    </p>
+    <p>
+      27. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+      Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia
+      in, elementum id enim. Curabitur non nulla sit amet.
+    </p>
+    <p>
+      28. Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis
+      porttitor volutpat. Proin eget tortor risus. Nulla porttitor accumsan
+      tincidunt. Curabitur aliquet quam id dui posuere blandit.
+    </p>
+    <p>
+      29. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras
+      ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis
+      in faucibus orci luctus et ultrices posuere cubilia Curae.
+    </p>
+    <p>
+      30. Donec rutrum congue leo eget malesuada. Curabitur arcu erat, accumsan
+      id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam
+      vehicula elementum sed sit amet dui. Nulla quis lorem ut libero.
+    </p>
+
+    <script src="script.js"></script>
+  </body>
 </html>

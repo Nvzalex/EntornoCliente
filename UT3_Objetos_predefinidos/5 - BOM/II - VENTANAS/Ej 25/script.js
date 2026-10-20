@@ -11,9 +11,52 @@
  * Añade un botón «Cerrar» que cierre la ventana abierta.
  * Antes de cerrarla, comprueba que existe y que no está cerrada ya (closed).
  */
+
+let ventana = null;
+
 function abrirVentana(url, ancho, alto) {
-  const dia = fecha.getDay();
-  return dia === 0 ? 7 : dia;
+  const izquierda = (screen.width - ancho) / 2;
+  const arriba = (screen.height - alto) / 2;
+
+  const features = `width=${ancho},height=${alto},left=${izquierda},top=${arriba},resizable=yes,scrollbars=yes`;
+
+  const nuevaVentana = window.open(url, "_blank", features);
+
+  if (
+    !nuevaVentana ||
+    nuevaVentana.closed ||
+    typeof nuevaVentana.closed === "undefined"
+  ) {
+    console.log("El navegador ha bloqueado la ventana emergente.");
+    return null;
+  }
+
+  return nuevaVentana;
 }
 
-console.log(abrirVentana(x, y, z));
+function cerrarVentana() {
+  if (ventana && !ventana.closed) {
+    ventana.close();
+    console.log("Ventana cerrada correctamente.");
+    ventana = null;
+  } else {
+    console.log("No hay ninguna ventana abierta o ya está cerrada.");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btnAbrir = document.getElementById("btn-abrir");
+  const btnCerrar = document.getElementById("btn-cerrar");
+
+  if (btnAbrir) {
+    btnAbrir.addEventListener("click", () => {
+      ventana = abrirVentana("about:blank", 800, 600);
+    });
+  }
+
+  if (btnCerrar) {
+    btnCerrar.addEventListener("click", () => {
+      cerrarVentana();
+    });
+  }
+});
