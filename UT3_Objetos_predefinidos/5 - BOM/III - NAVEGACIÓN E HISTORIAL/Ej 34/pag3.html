@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Página 3</title>
+  </head>
+  <body>
+    <h1>Página 3</h1>
+
+    <nav>
+      <a href="pag2.html">Volver a Página 2</a> |
+      <a href="pag1.html">Ir a Página 1</a>
+    </nav>
+
+    <p>
+      <button onclick="history.back()">Atrás</button>
+      <button onclick="history.forward()">Adelante</button>
+      <button onclick="history.go(-2)">Atrás 2</button>
+    </p>
+
+    <script>
+      console.log("pag3 - history.length =", history.length);
+    </script>
+  </body>
+</html>

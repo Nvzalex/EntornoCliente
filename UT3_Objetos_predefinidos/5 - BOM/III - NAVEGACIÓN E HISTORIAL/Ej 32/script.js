@@ -23,20 +23,19 @@ function descomponerURL(url) {
 
   const autoridad = resto.slice(0, iPath);
   const partes = autoridad.split(":");
+
   const dominio = partes[0];
   let puerto;
+
+  // prettier-ignore
   if (partes[1] !== undefined) {
     puerto = partes[1];
   } else if (protocolo === "https") {
-    puerto = "443";
-  } else {
-    puerto = "80";
-  }
+    puerto = "443";} else {puerto = "80";}
+
   return [protocolo, dominio, puerto, path];
 }
 
-console.log(descomponerURL("https://ejemplo.com:8080/curso/tema.html"));
-// ["https", "ejemplo.com", "8080", "/curso/tema.html"]
+console.log(descomponerURL("https://ejemplo.com:8080/curso/tema.html")); // ["https", "ejemplo.com", "8080", "/curso/tema.html"]
 
-console.log(descomponerURL("https://ejemplo.com/index.html"));
-// ["https", "ejemplo.com", "443", "/index.html"]
+console.log(descomponerURL("https://ejemplo.com/index.html")); // ["https", "ejemplo.com", "443", "/index.html"]

@@ -10,20 +10,9 @@
 function mostrarUbicacion(url) {
   const u = new URL(url);
 
-  return {
-    href: u.href,
-    origin: u.origin,
-    protocol: u.protocol,
-    hostname: u.hostname,
-    port: u.port,
-    pathname: u.pathname,
-    search: u.search,
-    hash: u.hash,
-  };
+  // prettier-ignore
+  return { href: u.href, origin: u.origin, protocol: u.protocol, hostname: u.hostname, 
+    port: u.port, pathname: u.pathname, search: u.search, hash: u.hash };
 }
 
-console.log(
-  mostrarUbicacion(
-    "http://127.0.0.1:5500/ejercicios/pagina.html?id=5&nombre=Ana#final",
-  ),
-);
+console.log(mostrarUbicacion("http://127.0.0.1:5500/ejercicios/pagina.html?id=5&nombre=Ana#final"));

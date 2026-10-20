@@ -25,9 +25,8 @@ function obtenerParametro(nombre) {
     const clave = par.slice(0, igual);
     const valor = par.slice(igual + 1);
 
-    if (clave === nombre) {
-      return valor;
-    }
+    // prettier-ignore
+    if (clave === nombre) {return valor;}
   }
 
   return null;

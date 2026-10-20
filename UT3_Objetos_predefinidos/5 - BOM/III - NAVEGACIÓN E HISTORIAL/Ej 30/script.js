@@ -10,17 +10,17 @@
  * Pruébala desde botones con dos páginas tuyas y comprueba con el
  * botón Atrás la diferencia entre los dos modos.
  */
-function cambioPagina(url, reemplazar = true) {
-  // Validación: cadena vacía, null o undefined → no cambiar
+function cambioPagina(url, reemplazar = false) {
+  //true para location.assing y false para location.replace
   if (url === null || url === undefined || url === "") {
     return;
   }
 
   if (reemplazar) {
-    window.location.replace(url); // sin historial
+    window.location.replace(url);
   } else {
-    window.location.href = url; // con historial
+    window.location.assign(url);
   }
 }
 
-console.log(cambioPagina("https://www.reddit.com/")); //location.assing para true y location.replace para false
+console.log(cambioPagina("https://www.reddit.com/"));
