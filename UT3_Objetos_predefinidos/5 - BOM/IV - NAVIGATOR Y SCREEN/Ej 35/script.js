@@ -9,6 +9,11 @@
  *
  * Para probar «Sin conexión», en las herramientas de desarrollo (pestaña Network) puedes simular el modo «Offline».
  */
-function infoNavegador() {}
+function infoNavegador() {
+  return `Idioma: ${navigator.language}
+Conexión: ${navigator.onLine ? "Conectado" : "Sin conexión"}
+Pantalla: ${screen.width} x ${screen.height}
+Disponible: ${screen.availWidth} x ${screen.availHeight}`;
+}
 
 console.log(infoNavegador());

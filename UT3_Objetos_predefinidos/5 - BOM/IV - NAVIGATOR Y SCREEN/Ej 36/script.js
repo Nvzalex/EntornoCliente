@@ -7,6 +7,17 @@
  * saludo("de-DE")   // "Hello!"
  * saludo()          // el saludo correspondiente al idioma de tu navegador
  */
-function saludo(idioma) {}
+function saludo(idioma = navigator.language) {
+  if (idioma.startsWith("es")) {
+    return "¡Hola!";
+  } else if (idioma.startsWith("fr")) {
+    return "Bonjour !";
+  } else {
+    return "Hello!";
+  }
+}
 
-console.log(saludo());
+console.log(saludo("es-ES")); // ¡Hola!
+console.log(saludo("fr-FR")); // Bonjour !
+console.log(saludo("de-DE")); // Hello!
+console.log(saludo()); // Saludo según el idioma del navegador

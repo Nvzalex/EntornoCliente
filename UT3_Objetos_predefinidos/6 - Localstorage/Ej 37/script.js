@@ -9,6 +9,19 @@
  * en otra pestaña y al cerrar y volver a abrir el navegador. Observa los
  *  valores en la pestaña Application.
  */
-function contarVisitas() {}
+function contarVisitas() {
+  let visitas = Number(localStorage.getItem("visitas")) || 0;
+  visitas++;
+  localStorage.setItem("visitas", visitas);
+  return visitas;
+}
 
-console.log(contarVisitas());
+function contarVisitasSesion() {
+  let visitas = Number(sessionStorage.getItem("visitasSesion")) || 0;
+  visitas++;
+  sessionStorage.setItem("visitasSesion", visitas);
+  return visitas;
+}
+
+console.log(`Esta es tu visita número ${contarVisitas()}`);
+console.log(`Esta es tu visita de sesión número ${contarVisitasSesion()}`);

@@ -4,6 +4,16 @@
  * que es un objeto Date. Utiliza las claves "dia", "mes" y "anno".
  * Comprueba en la pestaña Application que se han guardado las tres claves.
  */
-function almacenarFecha(fecha) {}
+function almacenarFecha(fecha) {
+  const dia = fecha.getDate();
+  const mes = fecha.getMonth() + 1;
+  const anno = fecha.getFullYear();
 
-console.log(almacenarFecha());
+  localStorage.setItem("dia", dia);
+  localStorage.setItem("mes", mes);
+  localStorage.setItem("anno", anno);
+
+  return { dia, mes, anno };
+}
+
+console.log(almacenarFecha(new Date()));

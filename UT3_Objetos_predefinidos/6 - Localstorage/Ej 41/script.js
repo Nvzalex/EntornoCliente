@@ -10,5 +10,16 @@
  *
  * Pruébala con ambos objetos.
  */
-function listarAlmacen(almacen) {}
-console.log(listarAlmacen());
+function listarAlmacen(almacen) {
+  let resultado = "Elementos: ${almacen.length}\n";
+
+  for (let i = 0; i < almacen.length; i++) {
+    const clave = almacen.key(i);
+    resultado += "${clave} = ${almacen.getItem(clave)}\n";
+  }
+
+  return resultado;
+}
+
+console.log(listarAlmacen(localStorage));
+console.log(listarAlmacen(sessionStorage));

@@ -7,5 +7,21 @@
  * Ejemplo: si hay las claves usuario_nombre, usuario_edad y tema,
  * entonces borrarPorPrefijo(localStorage, "usuario_") devuelve 2 y solo queda tema.
  */
-function borrarPorPrefijo(almacen, prefijo) {}
+function borrarPorPrefijo(almacen, prefijo) {
+  const clavesABorrar = [];
+
+  for (let i = 0; i < almacen.length; i++) {
+    const clave = almacen.key(i);
+    if (clave.startsWith(prefijo)) {
+      clavesABorrar.push(clave);
+    }
+  }
+
+  for (const clave of clavesABorrar) {
+    almacen.removeItem(clave);
+  }
+
+  return clavesABorrar.length;
+}
+
 console.log(borrarPorPrefijo(localStorage, "usuario_"));
