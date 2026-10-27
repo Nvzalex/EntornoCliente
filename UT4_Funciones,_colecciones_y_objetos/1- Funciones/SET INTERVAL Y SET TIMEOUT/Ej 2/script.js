@@ -6,11 +6,11 @@
 function calcularHora() {
   const ahora = new Date();
 
-  const hora = String(ahora.getHours()).padStart(2, "0");
-  const minuto = String(ahora.getMinutes()).padStart(2, "0");
-  const segundo = String(ahora.getSeconds()).padStart(2, "0");
+  const hora = ahora.getHours();
+  const minutos = ahora.getMinutes();
+  const segundos = ahora.getSeconds();
 
-  let fecha = hora + ":" + minuto + ":" + segundo;
+  let fecha = hora + ":" + minutos + ":" + segundos;
   return fecha;
 }
 
