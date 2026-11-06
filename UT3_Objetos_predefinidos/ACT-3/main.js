@@ -88,7 +88,8 @@ function analizarFechas() {
   ficha.nacimiento = new Date(anno, mes - 1, dia);
   let hoy = new Date();
   mostrar("<p>" + ficha.nacimiento + "</p>");
-  mostrar("<p>" + hoy - ficha.nacimiento + "</p>");
+  let diferencia = hoy.getTime() - ficha.nacimiento.getTime();
+  mostrar("<p>" + diferencia + "</p>");
 }
 
 // 4. VENTANAS ----------------------------------------------------------
