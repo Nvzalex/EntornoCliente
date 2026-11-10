@@ -8,6 +8,9 @@
  * ordenaDecreciente(arr);
  * console.log(arr);
  */
-function ordenaDecreciente(arr) {}
-
-console.log(ordenaDecreciente());
+function ordenaDecreciente(arr) {
+  arr.sort((a, b) => b - a);
+}
+let arr11 = [5, 2, 1, -10, 8];
+ordenaDecreciente(arr11);
+console.log(arr11);

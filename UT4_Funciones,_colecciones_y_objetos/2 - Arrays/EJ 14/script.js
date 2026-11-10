@@ -23,3 +23,13 @@
  * Para hacerlo, se puede mapear un array de objetos a otro.
  * Si se utilizan funciones flecha (=>), hay un pequeño truco.
  */
+let john = { nombre: "John", apellido: "Smith", id: 1 };
+let pete = { nombre: "Pete", apellido: "Hunt", id: 2 };
+let mary = { nombre: "Mary", apellido: "Key", id: 3 };
+let usuarios = [john, pete, mary];
+
+let usuariosMapeados = usuarios.map((u) => ({
+  id: u.id,
+  nombreCompleto: `${u.nombre} ${u.apellido}`,
+}));
+console.log(usuariosMapeados);

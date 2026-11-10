@@ -8,6 +8,12 @@
  * camelize("list-style-image") == "listStyleImage";
  * camelize("-webkit-transition") == "WebkitTransition";
  */
-function camelize(str) {}
-
-console.log(camelize());
+function camelize(str) {
+  return str
+    .split("-")
+    .map((palabra, index) => (index === 0 ? palabra : palabra.charAt(0).toUpperCase() + palabra.slice(1)))
+    .join("");
+}
+console.log(camelize("background-color"));
+console.log(camelize("list-style-image"));
+console.log(camelize("-webkit-transition"));

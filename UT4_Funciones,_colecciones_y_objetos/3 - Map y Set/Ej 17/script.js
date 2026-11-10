@@ -7,12 +7,19 @@
  * Al final del programa se deben mostrar el número de veces que ha
  * aparecido cada suma (ej. 2: ha salido 1.000 veces; 3: ha salido 950 veces; ...)
  */
-let generos = ["Jazz", "Blues"];
-console.log(generos);
+function simularDados() {
+  const resultados = new Map();
+  for (let i = 2; i <= 12; i++) resultados.set(i, 0);
 
-generos.push("Rock-n-Roll");
-console.log(generos);
+  for (let i = 0; i < 36000; i++) {
+    const dado1 = Math.floor(Math.random() * 6) + 1;
+    const dado2 = Math.floor(Math.random() * 6) + 1;
+    const suma = dado1 + dado2;
+    resultados.set(suma, resultados.get(suma) + 1);
+  }
 
-let medio = Math.floor(generos.length / 2);
-generos[medio] = "Classics";
-console.log(generos);
+  for (let [suma, veces] of resultados) {
+    console.log(`${suma}: ha salido ${veces} veces`);
+  }
+}
+simularDados();

@@ -6,6 +6,15 @@
  * por favor no detengas los ingresos con el cero.
  * • Devuelve el array generado.
  */
-function almacenarEntrada() {}
-
+function almacenarEntrada() {
+  const numeros = [];
+  while (true) {
+    let valor = prompt("Introduce un número (o vacío/Escape para terminar):");
+    if (valor === null || valor.trim() === "") break;
+    let numero = Number(valor);
+    if (isNaN(numero)) break;
+    numeros.push(numero);
+  }
+  return numeros;
+}
 console.log(almacenarEntrada());

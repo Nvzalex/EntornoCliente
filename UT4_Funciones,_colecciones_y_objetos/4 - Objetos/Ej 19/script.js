@@ -6,3 +6,13 @@
  * schedule["8:30"] = "Hora de levantarse";
  * alert( isEmpty(schedule) ); // false
  */
+function isEmpty(obj) {
+  for (let key in obj) {
+    return false;
+  }
+  return true;
+}
+let schedule = {};
+console.log(isEmpty(schedule));
+schedule["8:30"] = "Hora de levantarse";
+console.log(isEmpty(schedule));

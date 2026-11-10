@@ -7,5 +7,8 @@
  * ];
  * alert( unicos(values) ); // Hare, Krishna, :-O
  */
-function unicos(arr) {}
-console.log(unicos());
+function unicos(arr) {
+  return [...new Set(arr)];
+}
+let values = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", ":-O"];
+console.log(unicos(values));
