@@ -1,16 +1,8 @@
 /**
- * Ejercicio 10 — Una pregunta acerca de if
- * (Sentencias: decisiones)
- * --------------------------------------------------------------------
- *
- * ¿Cuáles de estos alert se van a ejecutar? ¿Cuáles son los resultados de
- * las expresiones dentro de cada if(...)?
- *
- * Piénsalo, anota tus respuestas y compáralas con el resultado real. Más
- * información: Una pregunta acerca de if
- * (https://es.javascript.info/logical-operators#un-pregunta-acerca-de-if).
+ * 8. Tenemos un array con números y cadenas, con algunas cadenas repetidas.
+ * • Queremos buscar una cadena concreta y cambiarla por la misma cadena
+ * en mayúsculas, pero sólo la primera vez que aparece. Si no encuentra la cadena,
+ * no hace nada (tener en cuenta que no dé un error en consola).
+ * • Repetir el ejercicio anterior, pero la cadena que queremos cambiar es la última que aparece.
+ * • Repetir el ejercicio anterior, pero cambiar todas las veces que aparece la cadena.
  */
-
-if (-1 || 0) alert("primero"); // Se ejecuta
-if (-1 && 0) alert("segundo"); // No se ejecuta
-if (null || (-1 && 1)) alert("tercero"); // Se ejecuta

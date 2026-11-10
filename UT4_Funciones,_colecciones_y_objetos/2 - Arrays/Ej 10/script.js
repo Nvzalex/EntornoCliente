@@ -1,17 +1,15 @@
 /**
- * Ejercicio 08 — Resultados con operadores lógicos
- * (Operadores lógicos)
- * --------------------------------------------------------------------
+ * 10. Escribe una función filterRange(arr, a, b) que obtenga un array arr,
+ * busque los elementos con valor mayor o igual a a y menor o igual a b y
+ * devuelva un array con los resultados.
+ * La función no debe modificar el array. Debe devolver un nuevo array.
+ * Por ejemplo:
  *
- * ¿Cuáles son los resultados de estas expresiones? Piénsalo y anota tus
- * respuestas antes de ejecutar el script.
- *
- * Más información: Operadores lógicos — primeras cinco tareas
- * (https://es.javascript.info/logical-operators#tasks).
+ * let arr = [5, 3, 8, 1];
+ * let filtrado = filterRange(arr, 1, 4);
+ * console.log(filtrado); // 3,1 (valores dentro del rango)
+ * console.log(arr); // 5,3,8,1 (array original no modificado)
  */
+function filterRange(arr, a, b) {}
 
-alert(null || 2 || undefined); // 2
-alert(alert(1) || 2 || alert(3)); // 1, 2
-alert(1 && null && 2); // null
-alert(alert(1) && alert(2)); // 1, undefined
-alert(null || (2 && 3) || 4); // 3
+console.log(filterRange());

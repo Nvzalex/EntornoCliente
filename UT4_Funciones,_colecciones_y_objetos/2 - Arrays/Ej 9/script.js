@@ -1,20 +1,13 @@
 /**
- * Ejercicio 09 — EDAD1
- * (Sentencias: decisiones)
- * --------------------------------------------------------------------
+ * 9. Escribe la función camelize(str) que convierta palabras separadas por guión
+ * como "mi-cadena-corta" en palabras con mayúscula "miCadenaCorta".
+ * Es decir, eliminar todos los guiones y que cada palabra después de un guión
+ * comience con mayúscula. Ejemplo:
  *
- * Crea una función edad1(edad) que devuelve true si la edad está entre 14
- * y 90, ambos inclusive.
+ * camelize("background-color") == "backgroundColor";
+ * camelize("list-style-image") == "listStyleImage";
+ * camelize("-webkit-transition") == "WebkitTransition";
  */
+function camelize(str) {}
 
-function edad1(edad) {
-  return edad >= 14 && edad <= 90;
-}
-
-let edad = 20; // cambia el valor para probar distintos casos
-
-if (edad1(edad)) {
-  alert("La edad está entre 14 y 90, inclusive.");
-} else {
-  alert("La edad NO está entre 14 y 90, inclusive.");
-}
+console.log(camelize());

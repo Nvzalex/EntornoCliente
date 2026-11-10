@@ -1,19 +1,11 @@
 /**
- * Ejercicio 13 — Tabla de multiplicar
- * (Sentencias: bucles)
- * --------------------------------------------------------------------
- *
- * Crea una función tablaMultiplicar(n) que recibe un parámetro, n.
- * La función escribirá en la consola la tabla de multiplicar de n de 1 a 10.
- * Si n no es un número, escribirá un texto indicando el error
+ * 6. Escribe una función almacenarEntrada() que:
+ * • Pida al usuario valores usando prompt y los almacene en un array.
+ * • Termine de pedirlos cuando el usuario ingrese un valor no numérico,
+ * una cadena vacía, o presione “Escape”. Un cero 0 es un número válido,
+ * por favor no detengas los ingresos con el cero.
+ * • Devuelve el array generado.
  */
+function almacenarEntrada() {}
 
-function tablaMultiplicar(n) {
-  let mult = 1;
-  do {
-    console.log(n + " * " + mult + " = " + n * mult);
-    mult++;
-  } while (mult <= 10);
-}
-
-console.log(tablaMultiplicar(5));
+console.log(almacenarEntrada());

@@ -1,0 +1,8 @@
+/**
+ * 18. Crea un script que:
+ * • Crea un objeto user vacío.
+ * • Agrega la propiedad name con el valor John.
+ * • Agrega la propiedad surname con el valor Smith.
+ * • Cambia el valor de name a Pete.
+ * • Elimina la propiedad name del objeto.
+ */

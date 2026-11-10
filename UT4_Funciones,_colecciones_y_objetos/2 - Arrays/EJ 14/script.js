@@ -1,25 +1,25 @@
 /**
- * Ejercicio 04 — Formas sufijo y prefijo
- * (Operadores básicos, aritméticos)
- * --------------------------------------------------------------------
+ * 14. Tienes un array de objetos usuarios, cada uno tiene nombre, apellido e id.
+ * Escribe el código para crear otro array a partir de este, de objetos con id y nombreCompleto, donde nombreCompleto es generado a partir de nombre y apellido.
+ * Ejemplo:
+ * let john = {nombre: "John", apellido: "Smith", id: 1};
+ * let pete = {nombre: "Pete", apellido: "Hunt", id: 2};
+ * let mary = {nombre: "Mary", apellido: "Key", id: 3};
  *
- * ¿Cuáles son los valores finales de las variables a, b, c y d después del
- * siguiente código?
+ * let usuarios = [john, pete, mary];
  *
- * Intenta responder primero; después compruébalo y asegúrate de entender el
- * motivo. Más información: Las formas sufijo y prefijo
- * (https://es.javascript.info/operators#las-formas-sufijo-y-prefijo).
+ * let usuariosMapeados =
+ * //... tu código ...
+ * //
+ * //usuariosMapeados= [
+ * //  {nombreCompleto: "John Smith", id: 1 },
+ * //  {nombreCompleto: "Pete Hunt", id: 2 },
+ * //  {nombreCompleto: "Mary Key", id: 3 }
+ * //]
+ *
+ * alert(usuariosMapeados[0].id); // 1
+ * alert(usuariosMapeados[0].nombreCompleto); // John Smith
+ *
+ * Para hacerlo, se puede mapear un array de objetos a otro.
+ * Si se utilizan funciones flecha (=>), hay un pequeño truco.
  */
-
-let a = 1,
-  b = 1;
-
-let c = ++a; // c = 2, a = 2
-let d = b++; // d = 1, b = 2
-
-// Cuando tengas tu respuesta, añade aquí código para comprobarla
-// (por ejemplo, con console.log)
-console.log(a); // 2
-console.log(b); // 2
-console.log(c); // 2
-console.log(d); // 1

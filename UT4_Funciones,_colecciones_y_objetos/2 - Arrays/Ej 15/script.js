@@ -1,14 +1,6 @@
 /**
- * Ejercicio 04 — Salida de plantillas literales
- * (Tipos de datos)
- * --------------------------------------------------------------------
- *
- * Piensa cuál será la salida de los siguientes comandos. Después,
- * compruébalo y asegúrate de entender el motivo del resultado.
+ * 15. Crea una función que reciba como parámetro una cadena y devuelva otra
+ * cadena formada por las letras de la cadena inicial ordenadas alfabéticamente.
+ * Hay que utilizar los métodos Array.from, el método sort de los arrays y el
+ * método join de los arrays.
  */
-
-let nombre = "Jose";
-
-alert(`Hola ${1}`); // Salida: Hola 1
-alert(`Hola ${"nombre"}`); // Salida: Hola nombre
-alert(`Hola ${nombre}`); // Salida: Hola Jose
