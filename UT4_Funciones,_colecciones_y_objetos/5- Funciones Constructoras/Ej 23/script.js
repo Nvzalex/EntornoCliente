@@ -12,12 +12,22 @@
  * alert( "Sum=" + calculator.sum() );
  * alert( "Mul=" + calculator.mul() );
  */
-let generos = ["Jazz", "Blues"];
-console.log(generos);
+function Calculator() {
+  this.read = function () {
+    this.a = +prompt("Introduce el primer número:", 0);
+    this.b = +prompt("Introduce el segundo número:", 0);
+  };
 
-generos.push("Rock-n-Roll");
-console.log(generos);
+  this.sum = function () {
+    return this.a + this.b;
+  };
 
-let medio = Math.floor(generos.length / 2);
-generos[medio] = "Classics";
-console.log(generos);
+  this.mul = function () {
+    return this.a * this.b;
+  };
+}
+
+let calculator = new Calculator();
+calculator.read();
+console.log("Sum=" + calculator.sum());
+console.log("Mul=" + calculator.mul());

@@ -7,12 +7,23 @@
  * • extraer(cantidad): permite retirar dinero de la cuenta, pasando la cantidad como parámetro.
  * • informar(): devuelve la información del estado de la cuenta: un texto con el titular y el saldo.
  */
-let generos = ["Jazz", "Blues"];
-console.log(generos);
+let cuenta = {
+  titular: "Alex",
+  saldo: 0,
 
-generos.push("Rock-n-Roll");
-console.log(generos);
+  ingresar(cantidad) {
+    this.saldo += cantidad;
+  },
 
-let medio = Math.floor(generos.length / 2);
-generos[medio] = "Classics";
-console.log(generos);
+  extraer(cantidad) {
+    this.saldo -= cantidad;
+  },
+
+  informar() {
+    return `Titular: ${this.titular}, Saldo: ${this.saldo}`;
+  },
+};
+
+cuenta.ingresar(500);
+cuenta.extraer(150);
+console.log(cuenta.informar());
