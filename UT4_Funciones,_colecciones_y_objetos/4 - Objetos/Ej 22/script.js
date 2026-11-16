@@ -13,14 +13,16 @@ let cuenta = {
 
   ingresar(cantidad) {
     this.saldo += cantidad;
+    console.log(this.informar());
   },
 
   extraer(cantidad) {
     this.saldo -= cantidad;
+    console.log(this.informar());
   },
 
   informar() {
-    return `Titular: ${this.titular}, Saldo: ${this.saldo}`;
+    return "Titular: ${this.titular}, Saldo: ${this.saldo}";
   },
 };
 
