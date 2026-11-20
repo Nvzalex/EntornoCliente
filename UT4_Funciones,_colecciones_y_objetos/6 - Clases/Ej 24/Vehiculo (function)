@@ -1,0 +1,26 @@
+function Vehiculo(color, marca, modelo, velocidadMax) {
+  this.color = color;
+  this.marca = marca;
+  this.modelo = modelo;
+  this.velocidadMax = velocidadMax;
+
+  let tiempo;
+  let tiempo2;
+
+  comenzar = function () {
+    tiempo = new Date();
+    return "Encender motor";
+  };
+  parar = function () {
+    tiempo2 = new Date();
+    return "Apagar motor";
+  };
+  distanciaMax = function () {
+    return "Distancia maxima: " + velocidadMax * ((tiempo2 - tiempo) / (1000 * 3600)) + " km";
+  };
+}
+
+console.log(Vehiculo("Negro", "Citroen", "Xara", 150));
+//comenzar();
+//parar();
+//distanciaMax();

@@ -8,29 +8,28 @@
  * funcionamiento y calculará la distancia máxima que puede haber recorrido,
  * que será el resultado de multiplicar la velocidad máxima por el tiempo.
  */
-function Vehiculo(color, marca, modelo, velocidadMax) {
-  this.color = color;
-  this.marca = marca;
-  this.modelo = modelo;
-  this.velocidadMax = velocidadMax;
+export class Vehiculo {
+  constructor(color, marca, modelo, velocidadMaxima) {
+    this.color = color;
+    this.marca = marca;
+    this.modelo = modelo;
+    this.velocidadMaxima = velocidadMaxima;
+  }
 
-  let tiempo;
-  let tiempo2;
+  comenzar() {
+    console.log("Encender motor");
+  }
 
-  comenzar = function () {
-    tiempo = new Date();
-    return "Encender motor";
-  };
-  parar = function () {
-    tiempo2 = new Date();
-    return "Apagar motor";
-  };
-  distanciaMax = function () {
-    return "Distancia maxima: " + velocidadMax * ((tiempo2 - tiempo) / (1000 * 3600)) + " km";
-  };
+  parar() {
+    console.log("Apagar motor");
+  }
+
+  distanciaMax(tiempo) {
+    return this.velocidadMaxima * tiempo;
+  }
 }
+const coche = new Vehiculo("Rojo", "Seat", "León", 200);
 
-console.log(Vehiculo("Negro", "Citroen", "Xara", 150));
-//comenzar();
-//parar();
-//distanciaMax();
+/*coche.comenzar();
+coche.parar();
+console.log(coche.distanciaMax(2));*/
