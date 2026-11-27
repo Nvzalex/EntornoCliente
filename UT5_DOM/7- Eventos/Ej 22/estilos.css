@@ -1,0 +1,9 @@
+#reloj {
+  font-family: monospace;
+  font-size: 40px;
+  color: #999;
+}
+
+#reloj.en-marcha {
+  color: #1f3864;
+}

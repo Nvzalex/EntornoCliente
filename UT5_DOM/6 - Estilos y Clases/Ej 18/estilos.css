@@ -1,0 +1,19 @@
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #999;
+  padding: 4px 10px;
+}
+
+.caro {
+  font-weight: bold;
+  background-color: #fff2cc;
+}
+
+.agotado {
+  color: #999;
+  text-decoration: line-through;
+}

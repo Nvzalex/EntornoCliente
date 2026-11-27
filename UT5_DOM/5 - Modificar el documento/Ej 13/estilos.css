@@ -1,0 +1,34 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+#ficha img {
+  width: 200px;
+}
+
+#ficha table {
+  border-collapse: collapse;
+}
+
+#ficha th,
+#ficha td {
+  border: 1px solid #999;
+  padding: 3px 10px;
+}
+
+#lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tarjeta {
+  width: 120px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+}

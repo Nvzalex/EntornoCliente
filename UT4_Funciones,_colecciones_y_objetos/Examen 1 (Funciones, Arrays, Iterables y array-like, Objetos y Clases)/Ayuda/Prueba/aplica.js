@@ -14,16 +14,8 @@ const ALUMNO = "Alejandro Navazo Nova";
  Pista: split y map.
 */
 function partesFecha(texto) {
-  texto = texto.split("-");
-  let anio;
-  let mes;
-  let dia;
-  texto = new Map([
-    [anio, texto[0]],
-    [mes, texto[1]],
-    [dia, texto[2]],
-  ]);
-  return texto;
+  const [anio, mes, dia] = texto.split("-").map(Number);
+  return { anio, mes, dia };
 }
 // COMPROBACIÓN
 {
@@ -79,8 +71,9 @@ function datosPublicos(usuario) {
  devuelve { nombre: "teclado", precio: 20, stock: 0 }.
 */
 function actualizar(producto, cambios) {
-  const resultado = { producto, cambios };
-  console.log(resultado);
+  // const resultado = { producto, cambios };
+  // console.log(resultado);
+  const resultado = { ...producto, ...cambios };
 
   return resultado;
 }
@@ -100,11 +93,13 @@ function actualizar(producto, cambios) {
  Ejemplo: listar({ DWEC: 7, DWES: 5 }) devuelve ["DWEC: 7", "DWES: 5"].
  Pista: Object.entries.
 */
-function listar(obj) {
-  for (const { obj } of objeto) {
-    objeto = [obj];
-    return objeto;
+function listar(objeto) {
+  let array = [];
+  for (const [clave, valor] of Object.entries(objeto)) {
+    let nuevo = clave + ": " + valor;
+    array.push(nuevo);
   }
+  return array;
 }
 // COMPROBACIÓN
 {
